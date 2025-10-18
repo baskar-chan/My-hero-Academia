@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8">
+  <title>سلام تعاملی</title>
+  <style>
+    body { font-family: "Tahoma", sans-serif; text-align:center; padding:40px; background:#f6f8fb; }
+    .greet { display:inline-block; background:#2b8aef; color:#fff; padding:18px 28px; border-radius:10px; box-shadow:0 6px 18px rgba(43,138,239,0.2); }
+    button { margin-top:18px; padding:8px 14px; border:0; border-radius:6px; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="greet">
+    <h1 id="msg">سلام</h1>
+    <p id="sub">به صفحه‌ی نمونه خوش آمدید</p>
+    <button onclick="change()">تغییر پیام</button>
+  </div>
+
+  <script>
+    function change() {
+      const msg = document.getElementById('msg');
+      const sub = document.getElementById('sub');
+      if (msg.textContent === 'سلام') {
+        msg.textContent = 'درود';
+        sub.textContent = 'امتحان تغییر پیام به فارسی';
+      } else {
+        msg.textContent = 'سلام';
+        sub.textContent = 'به صفحه‌ی نمونه خوش آمدید';
+      }
+    }
+  </script>
+</body>
+</html>
