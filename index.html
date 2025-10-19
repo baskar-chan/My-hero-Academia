@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دانلود My Hero Academia</title>
+    
+    <!-- آیکون‌ها -->
+    <link rel="icon" href="https://abrehamrahi.ir/o/public/eAj5tTri/" type="image/png">
+    <link rel="apple-touch-icon" href="https://abrehamrahi.ir/o/public/eAj5tTri/">
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #0b1a3a;
+            --glass-light: rgba(255, 255, 255, 0.15);
+            --glass-medium: rgba(255, 255, 255, 0.25);
+            --glass-dark: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-red: linear-gradient(135deg, rgba(212, 0, 0, 0.7), rgba(255, 51, 51, 0.5));
+            --glass-yellow: rgba(255, 249, 230, 0.85);
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+
+        .main-content {
+            opacity: 1;
+            transform: translateY(0);
+            padding: 15px;
+            padding-bottom: 50px;
+            box-sizing: border-box;
+            margin-top: 1cm;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255,255,255,0.35) 0 1.6px, transparent 2px),
+                radial-gradient(circle at 32% 66%, rgba(255,255,255,0.32) 0 1.4px, transparent 2px),
+                radial-gradient(circle at 78% 24%, rgba(255,255,255,0.38) 0 1.8px, transparent 2px),
+                radial-gradient(circle at 55% 12%, rgba(255,255,255,0.30) 0 1.3px, transparent 2px),
+                radial-gradient(circle at 8% 82%, rgba(255,255,255,0.33) 0 1.5px, transparent 2px),
+                radial-gradient(circle at 90% 70%, rgba(255,255,255,0.34) 0 1.4px, transparent 2px),
+                radial-gradient(circle at 25% 40%, rgba(255,255,255,0.36) 0 1.5px, transparent 2px),
+                radial-gradient(circle at 65% 15%, rgba(255,255,255,0.32) 0 1.3px, transparent 2px),
+                radial-gradient(circle at 40% 85%, rgba(255,255,255,0.37) 0 1.6px, transparent 2px),
+                radial-gradient(circle at 75% 55%, rgba(255,255,255,0.31) 0 1.4px, transparent 2px),
+                radial-gradient(circle at 15% 20%, rgba(255,255,255,0.45) 0 2.2px, transparent 2.6px),
+                radial-gradient(circle at 45% 75%, rgba(255,255,255,0.50) 0 2.4px, transparent 2.8px),
+                radial-gradient(circle at 80% 30%, rgba(255,255,255,0.42) 0 2px, transparent 2.4px),
+                radial-gradient(circle at 60% 50%, rgba(255,255,255,0.48) 0 2.2px, transparent 2.6px),
+                radial-gradient(circle at 30% 70%, rgba(255,255,255,0.46) 0 2.3px, transparent 2.7px),
+                linear-gradient(var(--blue), var(--blue));
+
+            background-blend-mode: screen, screen, screen, screen, screen, screen,
+                                screen, screen, screen, screen,
+                                screen, screen, screen, screen, screen,
+                                normal;
+
+            background-size:
+                180px 180px,
+                200px 200px,
+                220px 220px,
+                240px 240px,
+                260px 260px,
+                280px 280px,
+                300px 300px,
+                320px 320px,
+                340px 340px,
+                360px 360px,
+                380px 380px,
+                400px 400px,
+                420px 420px,
+                440px 440px,
+                460px 460px,
+                auto;
+
+            background-position: center;
+            animation: twinkle 6s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { filter: brightness(1.1); }
+            50% { filter: brightness(1.35); }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px 17px;
+            border-radius: 20px;
+            margin-top: 10px;
+            background: transparent;
+        }
+
+        .download-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .download-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .download-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .episode-title {
+            font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: #FF0000;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            text-shadow: none;
+        }
+
+        .download-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .file-size {
+            background: rgba(255, 229, 0, 0.2);
+            color: #FFE500;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 1px solid rgba(255, 229, 0, 0.3);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #45a049, #4CAF50);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .download-btn i {
+            margin-left: 8px;
+        }
+
+        .half-price-container {
+            background: rgba(76, 175, 80, 0.15);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 8px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .half-price-icon {
+            color: #4CAF50;
+            font-size: 1.2rem;
+        }
+
+        .half-price-text {
+            color: #4CAF50;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            display: inline-block;
+            max-width: 350px;
+            height: auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* استایل بخش سوال و جواب */
+        .faq-container {
+            max-width: 700px;
+            margin: 30px auto 0;
+        }
+
+        .faq-question-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .faq-question-box:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #FFE500;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question-box.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* استایل کادر پیام پاسخ - با تیزی بیرون زده در سمت چپ */
+        .answer-message {
+            background: #FFEB3B; /* رنگ زرد شبیه تلگرام */
+            border-radius: 8px 8px 0 8px; /* گوشه پایین سمت چپ تیز */
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #FBC02D;
+            margin-top: 15px;
+            margin-right: 20px; /* فاصله از راست */
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            position: relative;
+        }
+
+        /* ایجاد تیزی بیرون زده در سمت چپ */
+        .answer-message::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: -10px;
+            width: 20px;
+            height: 20px;
+            background: #FFEB3B;
+            transform: rotate(45deg);
+            z-index: -1;
+            border-bottom: 1px solid #FBC02D;
+            border-left: 1px solid #FBC02D;
+        }
+
+        .faq-question-box.active + .answer-message {
+            max-height: 300px;
+            padding: 16px;
+            overflow-y: auto;
+        }
+
+        .typed-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #5D4037; /* رنگ متن قهوه‌ای تیره برای خوانایی */
+            white-space: normal;
+            overflow: visible;
+            min-height: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(5px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            margin-left: 4px;
+        }
+
+        .word.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background-color: #5D4037; /* رنگ مکان‌نمای تیره */
+            margin-right: 2px;
+            vertical-align: middle;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* استایل اسکرول بار برای کادر پاسخ */
+        .answer-message::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .answer-message::-webkit-scrollbar-track {
+            background: rgba(251, 192, 45, 0.3);
+            border-radius: 10px;
+        }
+
+        .answer-message::-webkit-scrollbar-thumb {
+            background: rgba(93, 64, 55, 0.3);
+            border-radius: 10px;
+        }
+
+        .answer-message::-webkit-scrollbar-thumb:hover {
+            background: rgba(93, 64, 55, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background:
+                    radial-gradient(circle at 5% 10%, rgba(255,255,255,0.35) 0 0.6px, transparent 1px),
+                    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.32) 0 0.5px, transparent 1px),
+                    radial-gradient(circle at 25% 40%, rgba(255,255,255,0.38) 0 0.7px, transparent 1px),
+                    radial-gradient(circle at 35% 55%, rgba(255,255,255,0.30) 0 0.4px, transparent 1px),
+                    radial-gradient(circle at 45% 70%, rgba(255,255,255,0.33) 0 0.5px, transparent 1px),
+                    radial-gradient(circle at 55% 85%, rgba(255,255,255,0.34) 0 0.5px, transparent 1px),
+                    radial-gradient(circle at 65% 15%, rgba(255,255,255,0.36) 0 0.6px, transparent 1px),
+                    radial-gradient(circle at 75% 30%, rgba(255,255,255,0.32) 0 0.4px, transparent 1px),
+                    radial-gradient(circle at 85% 45%, rgba(255,255,255,0.37) 0 0.6px, transparent 1px),
+                    radial-gradient(circle at 95% 60%, rgba(255,255,255,0.31) 0 0.5px, transparent 1px),
+                    
+                    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.35) 0 0.6px, transparent 1px),
+                    radial-gradient(circle at 20% 35%, rgba(255,255,255,0.32) 0 0.5px, transparent 1px),
+                    radial-gradient(circle at 30% 50%, rgba(255,255,255,0.38) 0 0.7px, transparent 1px),
+                    radial-gradient(circle at 40% 65%, rgba(255,255,255,0.30) 0 0.4px, transparent 1px),
+                    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.33) 0 0.5px, transparent 1px),
+                    radial-gradient(circle at 60% 5%, rgba(255,255,255,0.34) 0 0.5px, transparent 1px),
+                    radial-gradient(circle at 70% 20%, rgba(255,255,255,0.36) 0 0.6px, transparent 1px),
+                    radial-gradient(circle at 80% 35%, rgba(255,255,255,0.32) 0 0.4px, transparent 1px),
+                    radial-gradient(circle at 90% 50%, rgba(255,255,255,0.37) 0 0.6px, transparent 1px),
+                    radial-gradient(circle at 100% 65%, rgba(255,255,255,0.31) 0 0.5px, transparent 1px),
+
+                    radial-gradient(circle at 8% 15%, rgba(255,255,255,0.45) 0 0.9px, transparent 1.3px),
+                    radial-gradient(circle at 22% 40%, rgba(255,255,255,0.50) 0 1px, transparent 1.4px),
+                    radial-gradient(circle at 36% 65%, rgba(255,255,255,0.42) 0 0.8px, transparent 1.2px),
+                    radial-gradient(circle at 50% 10%, rgba(255,255,255,0.48) 0 0.9px, transparent 1.3px),
+                    radial-gradient(circle at 64% 35%, rgba(255,255,255,0.46) 0 0.95px, transparent 1.35px),
+                    radial-gradient(circle at 78% 60%, rgba(255,255,255,0.45) 0 0.9px, transparent 1.3px),
+                    radial-gradient(circle at 92% 85%, rgba(255,255,255,0.50) 0 1px, transparent 1.4px),
+                    radial-gradient(circle at 12% 75%, rgba(255,255,255,0.42) 0 0.8px, transparent 1.2px),
+                    radial-gradient(circle at 26% 5%, rgba(255,255,255,0.48) 0 0.9px, transparent 1.3px),
+                    radial-gradient(circle at 40% 30%, rgba(255,255,255,0.46) 0 0.95px, transparent 1.35px),
+
+                    radial-gradient(circle at 18% 22%, rgba(255,255,255,0.55) 0 1.2px, transparent 1.6px),
+                    radial-gradient(circle at 38% 48%, rgba(255,255,255,0.60) 0 1.3px, transparent 1.7px),
+                    radial-gradient(circle at 58% 74%, rgba(255,255,255,0.52) 0 1.1px, transparent 1.5px),
+                    radial-gradient(circle at 78% 15%, rgba(255,255,255,0.58) 0 1.2px, transparent 1.6px),
+                    radial-gradient(circle at 98% 42%, rgba(255,255,255,0.56) 0 1.25px, transparent 1.65px),
+
+                    linear-gradient(var(--blue), var(--blue));
+
+                background-blend-mode: screen, screen, screen, screen, screen, screen,
+                                    screen, screen, screen, screen,
+                                    screen, screen, screen, screen, screen,
+                                    screen, screen, screen, screen, screen,
+                                    screen, screen, screen, screen, screen,
+                                    screen, screen, screen, screen, screen,
+                                    normal;
+
+                background-size:
+                    120px 120px,
+                    130px 130px,
+                    140px 140px,
+                    150px 150px,
+                    160px 160px,
+                    170px 170px,
+                    180px 180px,
+                    190px 190px,
+                    200px 200px,
+                    210px 210px,
+                    120px 120px,
+                    130px 130px,
+                    140px 140px,
+                    150px 150px,
+                    160px 160px,
+                    170px 170px,
+                    180px 180px,
+                    190px 190px,
+                    200px 200px,
+                    210px 210px,
+                    220px 220px,
+                    230px 230px,
+                    240px 240px,
+                    250px 250px,
+                    260px 260px,
+                    270px 270px,
+                    280px 280px,
+                    290px 290px,
+                    300px 300px,
+                    auto;
+            }
+            
+            .container {
+                padding: 10px 14px;
+                width: 100%;
+                background: transparent;
+            }
+            
+            .download-box {
+                padding: 20px;
+            }
+            
+            .episode-title {
+                font-size: 1.3rem;
+                padding: 8px 16px;
+            }
+            
+            .download-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .file-size {
+                font-size: 1rem;
+                padding: 6px 12px;
+            }
+
+            .half-price-container {
+                padding: 8px 12px;
+            }
+            
+            .half-price-text {
+                font-size: 0.9rem;
+            }
+            
+            .download-btn {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+            }
+            
+            .logo {
+                max-width: 280px;
+            }
+
+            .main-content {
+                padding: 10px;
+                padding-bottom: 40px;
+                margin-top: 0.5cm;
+            }
+
+            .faq-question-box {
+                padding: 15px;
+            }
+            
+            .faq-question {
+                font-size: 1rem;
+            }
+            
+            .typed-text {
+                font-size: 1rem;
+            }
+            
+            .faq-question-box.active + .answer-message {
+                max-height: 250px;
+                padding: 14px;
+            }
+            
+            .answer-message {
+                margin-right: 15px;
+            }
+            
+            .answer-message::before {
+                bottom: -8px;
+                left: -8px;
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 8px 11px;
+            }
+            
+            .download-box {
+                padding: 15px;
+            }
+            
+            .episode-title {
+                font-size: 1.2rem;
+                padding: 6px 12px;
+            }
+            
+            .file-size {
+                font-size: 0.9rem;
+                padding: 5px 10px;
+            }
+
+            .half-price-container {
+                padding: 6px 10px;
+            }
+            
+            .half-price-text {
+                font-size: 0.85rem;
+            }
+            
+            .download-btn {
+                padding: 8px 16px;
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+            
+            .logo {
+                max-width: 220px;
+            }
+
+            .main-content {
+                padding: 5px;
+                padding-bottom: 30px;
+                margin-top: 0.3cm;
+            }
+
+            .faq-question-box {
+                padding: 12px;
+            }
+            
+            .faq-question {
+                font-size: 0.95rem;
+            }
+            
+            .typed-text {
+                font-size: 0.95rem;
+            }
+            
+            .faq-question-box.active + .answer-message {
+                max-height: 200px;
+                padding: 12px;
+            }
+            
+            .answer-message::before {
+                bottom: -6px;
+                left: -6px;
+                width: 12px;
+                height: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://abrehamrahi.ir/o/public/C0HVUKnG/" alt="My Hero Academia Logo">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="download-container">
+                <div class="download-box">
+                    <div class="episode-title">قسمت 1</div>
+                    <div class="download-info">
+                        <div class="file-size">
+                            <i class="fas fa-download"></i> حجم: ۴۰۳ مگابایت
+                        </div>
+                    </div>
+                    <a href="https://urldl.ir/dl/349314/2A3prrK76d/%D9%82%D8%B3%D9%85%D8%AA%۲۰۱" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> دانلود قسمت 1
+                    </a>
+                    <div class="half-price-container">
+                        <i class="fas fa-percentage half-price-icon"></i>
+                        <span class="half-price-text">حجم با دانلود نیم بها: ۲۰۱.۵ مگابایت</span>
+                    </div>
+                </div>
+                
+                <div class="download-box">
+                    <div class="episode-title">قسمت 2</div>
+                    <div class="download-info">
+                        <div class="file-size">
+                            <i class="fas fa-download"></i> حجم: ۳۵۶ مگابایت
+                        </div>
+                    </div>
+                    <a href="https://urldl.ir/dl/349315/FsD6pbcqKa/%D9%82%D8%B3%D9%85%D8%AA%۲۰۲" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> دانلود قسمت 2
+                    </a>
+                    <div class="half-price-container">
+                        <i class="fas fa-percentage half-price-icon"></i>
+                        <span class="half-price-text">حجم با دانلود نیم بها: ۱۷۸ مگابایت</span>
+                    </div>
+                </div>
+
+                <div class="download-box">
+                    <div class="episode-title">قسمت 3</div>
+                    <div class="download-info">
+                        <div class="file-size">
+                            <i class="fas fa-download"></i> حجم: ۴۳۰ مگابایت
+                        </div>
+                    </div>
+                    <a href="https://urldl.ir/dl/351326/QzIJPy0VRV/%D9%82%D8%B3%D9%85%D8%AA%۲۰۳" class="download-btn" target="_blank">
+                        <i class="fas fa-download"></i> دانلود قسمت 3
+                    </a>
+                    <div class="half-price-container">
+                        <i class="fas fa-percentage half-price-icon"></i>
+                        <span class="half-price-text">حجم با دانلود نیم بها: ۲۱۵ مگابایت</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بخش سوال و جواب -->
+            <div class="faq-container">
+                <div class="faq-question-box">
+                    <div class="faq-question">
+                        <span>نت کم دارم چطوری دانلود کنم؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="answer-message">
+                    <div class="typed-text" id="answer-text">
+                        <!-- متن پاسخ توسط JavaScript پر می‌شود -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // متن پاسخ
+        const answerText = "نگران نباش! ما از دانلود نیم‌بها استفاده می‌کنیم، یعنی حجم اینترنت شما نصف محاسبه می‌شود. مثلاً اگر یک فایل ۲۰۰ مگابایتی دانلود کنید، فقط ۱۰۰ مگابایت از حجم اینترنت شما کسر می‌شود. این ویژگی به شما کمک می‌کند تا با خیال راحت و بدون نگرانی از تمام شدن حجم اینترنت، از محتوای مورد علاقه خود لذت ببرید.";
+
+        // تابع برای تایپ کلمه به کلمه
+        function typeWords(element, text, speed = 100) {
+            // پاک کردن محتوای قبلی
+            element.innerHTML = '';
+            
+            // تقسیم متن به کلمات
+            const words = text.split(' ');
+            let index = 0;
+            
+            // اضافه کردن مکان‌نما
+            const cursor = document.createElement('span');
+            cursor.className = 'cursor';
+            element.appendChild(cursor);
+            
+            // تابع برای نمایش کلمات
+            function showNextWord() {
+                if (index < words.length) {
+                    // ایجاد المان برای کلمه جدید
+                    const wordSpan = document.createElement('span');
+                    wordSpan.className = 'word';
+                    wordSpan.textContent = words[index] + ' ';
+                    
+                    // اضافه کردن کلمه قبل از مکان‌نما
+                    element.insertBefore(wordSpan, cursor);
+                    
+                    // انیمیشن نمایش کلمه
+                    setTimeout(() => {
+                        wordSpan.classList.add('visible');
+                    }, 10);
+                    
+                    index++;
+                    
+                    // فراخوانی تابع برای کلمه بعدی
+                    setTimeout(showNextWord, speed);
+                } else {
+                    // حذف مکان‌نما پس از اتمام تایپ
+                    setTimeout(() => {
+                        cursor.remove();
+                    }, 500);
+                }
+            }
+            
+            // شروع تایپ
+            showNextWord();
+        }
+
+        // اضافه کردن عملکرد کلیک برای بخش سوال و جواب
+        document.querySelector('.faq-question-box').addEventListener('click', function() {
+            const isActive = this.classList.contains('active');
+            const answerMessage = this.nextElementSibling;
+            const answerTextElement = document.getElementById('answer-text');
+            
+            // بستن همه کادرهای فعال
+            document.querySelectorAll('.faq-question-box').forEach(box => {
+                box.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.answer-message').forEach(message => {
+                message.classList.remove('active');
+            });
+            
+            // اگر قبلا فعال نبوده، بازش کن
+            if (!isActive) {
+                this.classList.add('active');
+                answerMessage.classList.add('active');
+                
+                // شروع تایپ کلمه به کلمه
+                typeWords(answerTextElement, answerText, 120);
+            }
+        });
+    </script>
+</body>
+</html>
